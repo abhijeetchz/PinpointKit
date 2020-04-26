@@ -98,7 +98,7 @@ public struct InterfaceCustomization {
         public init(statusBarStyle: UIStatusBarStyle = .default,
                     tintColor: UIColor? = .pinpointOrange(),
                     annotationFillColor: UIColor? = nil,
-                    annotationStrokeColor: UIColor = .white,
+                    annotationStrokeColor: UIColor = .pinpointOrange(),
                     annotationTextAttributes: [NSAttributedString.Key: AnyObject]? = nil,
                     navigationTitleColor: UIColor = .darkText,
                     navigationTitleFont: UIFont = .sourceSansProFont(ofSize: 19, weight: .semibold),
@@ -211,13 +211,8 @@ public struct InterfaceCustomization {
 private extension InterfaceCustomization.Appearance {
     
     static var defaultTextAnnotationAttributes: [NSAttributedString.Key: AnyObject] {
-        let shadow = NSShadow()
-        shadow.shadowBlurRadius = 5
-        shadow.shadowColor = UIColor.black
-        shadow.shadowOffset = .zero
-
-        return [.font: DefaultAnnotationTextFont, .shadow: shadow, .kern: 1.3 as NSNumber]
+        return [.font: DefaultAnnotationTextFont, .kern: 0 as NSNumber]
     }
     
-    static let DefaultAnnotationTextFont = UIFont.sourceSansProFont(ofSize: 32, weight: .semibold)
+    static let DefaultAnnotationTextFont = UIFont.sourceSansProFont(ofSize: 16, weight: .semibold)
 }
