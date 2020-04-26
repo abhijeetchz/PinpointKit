@@ -126,19 +126,17 @@ class BoxAnnotation: Annotation {
 
     /// The border width of the box.
     var borderWidth: CGFloat {
-        let size = frame.size
-        let maximumWidth = max(4.0, min(size.width, size.height) * 0.075)
-        return min(maximumWidth, 14.0)
+        return 2.0
     }
 
     /// The shadow radius of the box.
     var shadowRadius: CGFloat {
-        return max(3.0, borderWidth * 0.25)
+        return 1.0
     }
 
     /// The stroke width of the box.
     var strokeWidth: CGFloat {
-        return max(2.0, borderWidth * 0.25)
+        return 0.5
     }
     
     /// The corner radius of the box.
