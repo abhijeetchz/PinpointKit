@@ -98,9 +98,9 @@ public struct InterfaceCustomization {
         public init(statusBarStyle: UIStatusBarStyle = .default,
                     tintColor: UIColor? = .pinpointOrange(),
                     annotationFillColor: UIColor? = nil,
-                    annotationStrokeColor: UIColor = .pinpointOrange(),
+                    annotationStrokeColor: UIColor = .white,
                     annotationTextAttributes: [NSAttributedString.Key: AnyObject]? = nil,
-                    navigationTitleColor: UIColor = .darkText,
+                    navigationTitleColor: UIColor = .pinpointOrange(),
                     navigationTitleFont: UIFont = .sourceSansProFont(ofSize: 19, weight: .semibold),
                     feedbackSendButtonFont: UIFont = .sourceSansProFont(ofSize: 19, weight: .semibold),
                     feedbackCancelButtonFont: UIFont = .sourceSansProFont(ofSize: 19),
@@ -214,5 +214,5 @@ private extension InterfaceCustomization.Appearance {
         return [.font: DefaultAnnotationTextFont, .kern: 0 as NSNumber]
     }
     
-    static let DefaultAnnotationTextFont = UIFont.sourceSansProFont(ofSize: 16, weight: .semibold)
+    static let DefaultAnnotationTextFont = UIFont.sourceSansProFont(ofSize: 16, weight: .regular)
 }
